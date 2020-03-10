@@ -1,0 +1,24 @@
+{
+  "name": "caderno-exercicios",
+  "version": "1.0.0",
+  "description": "Caderno de Exercícios JavaScript",
+  "main": "01.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^25.1.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node 05.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marceloribeirosilva/caderno-exercicios-js.git"
+  },
+  "author": "Marcelo Silva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marceloribeirosilva/caderno-exercicios-js/issues"
+  },
+  "homepage": "https://github.com/marceloribeirosilva/caderno-exercicios-js#readme"
+}

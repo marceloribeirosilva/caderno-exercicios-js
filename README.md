@@ -21,3 +21,5 @@ Crie uma função que retorne todos os sub-diretórios em um vetor.
 
 4. A lista de arquivos retornado no exercício 2, também retorna diretórios.
 Crie uma função que retorne todos os arquivos em um vetor.
+
+5. Dado um vetor, crie uma função que multiplique os valores por x e retorne a soma dos números pares. Criar um teste de unidade para essa função.
