@@ -38,6 +38,7 @@ const getCotacao = async ()=> {
 
 module.exports = {
     getCotacaoAPI,
-    extractValueCotacao
+    extractValueCotacao,
+    getToday
 }
 

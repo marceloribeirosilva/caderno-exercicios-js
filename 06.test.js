@@ -23,3 +23,26 @@ test('extractCotacao',()=>{
     const cotacao = exercicioSeis.extractValueCotacao(res)
     expect(cotacao).toBe(4.60)
 })
+
+describe('getToday',()=>{
+    const RealDate = Date;
+
+    function mockDate(date){
+        global.Date = class extends RealDate {
+            constructor(){
+                return new RealDate(date)
+            }
+        }
+    }
+
+    afterEach(()=>{
+        global.Date = RealDate
+    })
+
+    test('getToday',()=>{
+        mockDate('2020-02-13T12:00:00z')
+        const today = exercicioSeis.getToday()
+        console.log(today)
+        expect(today).toBe('2-12-2020')
+    })
+})
