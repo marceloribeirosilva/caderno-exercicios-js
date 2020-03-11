@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "Caderno de Exercícios JavaScript",
   "main": "01.js",
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.19.2"
+  },
   "devDependencies": {
     "jest": "^25.1.0"
+  },
+  "jest":{
+    "collectCoverage": true
   },
   "scripts": {
     "test": "jest",
