@@ -6,7 +6,7 @@ jest.mock('axios')
 const res = {
     data: {
         value: [
-            {cotacaoVenda: 4.60}
+            {cotacaoVenda: 4.6}
         ]
     }
 }
@@ -40,9 +40,48 @@ describe('getToday',()=>{
     })
 
     test('getToday',()=>{
-        mockDate('2020-02-20T12:00:00z')
-        const today = exercicioSeis.getToday()
-        console.log(today)
-        expect(today).toBe('2-12-2020')
+        mockDate('2020-02-22T12:00:00z')
+        const today = exercicioSeis.getToday()        
+        expect(today).toBe('2-21-2020')
     }) 
+})
+
+test('getUrl',()=>{
+    const url = exercicioSeis.getUrl('DATA')
+    expect(url).toBe('https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao=\'DATA\'&$top=100&$format=json&$select=cotacaoCompra,cotacaoVenda')
+})
+
+test('getCotacao', async ()=>{
+    const getToday = jest.fn()
+    getToday.mockReturnValue('01-01-2020')
+    
+    const getUrl = jest.fn()
+    getUrl.mockReturnValue('url')
+
+    const getCotacaoAPI = jest.fn()
+    getCotacaoAPI.mockResolvedValue(res)
+
+    const extractValueCotacao = jest.fn()
+    extractValueCotacao.mockReturnValue(3.0)
+
+    const val = await exercicioSeis.pure.getCotacao({getToday, getUrl, getCotacaoAPI, extractValueCotacao})()
+    expect(val).toBe(3.0)
+
+})
+
+test('getCotacaoException', async ()=>{
+    const getToday = jest.fn()
+    getToday.mockReturnValue('01-01-2020')
+    
+    const getUrl = jest.fn()
+    getUrl.mockReturnValue('url')
+
+    const getCotacaoAPI = jest.fn()
+    getCotacaoAPI.mockReturnValue(Promise.reject('err'))
+
+    const extractValueCotacao = jest.fn()
+    extractValueCotacao.mockReturnValue(3)
+
+    const val = await exercicioSeis.pure.getCotacao({getToday, getUrl, getCotacaoAPI, extractValueCotacao})()
+    expect(val).toBe('')
 })
