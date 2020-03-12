@@ -40,7 +40,7 @@ describe('getToday',()=>{
     })
 
     test('getToday',()=>{
-        mockDate('2020-01-13T12:00:00z')
+        mockDate('2020-02-13T12:00:00z')
         const today = exercicioSeis.getToday()
         console.log(today)
         expect(today).toBe('2-12-2020')
