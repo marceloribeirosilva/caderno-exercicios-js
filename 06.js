@@ -6,7 +6,7 @@ Utilizar acesso à API do Banco Central.
 
 https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/aplicacao#!/recursos
 
-Criar um teste de unidade
+Criar testes de unidade
 */
 
 const axios = require('axios')

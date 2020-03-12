@@ -23,3 +23,7 @@ Crie uma função que retorne todos os sub-diretórios em um vetor.
 Crie uma função que retorne todos os arquivos em um vetor.
 
 5. Dado um vetor, crie uma função que multiplique os valores por x e retorne a soma dos números pares. Criar um teste de unidade para essa função.
+
+6. Criar uma função que converta em R$ pelo valor do Dolar atual, utilizando acesso à API do Banco Central.
+    #### Dica: Utilizar axios para acessar a api: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/aplicacao#!/recursos
+    ##### Criar testes de unidade
