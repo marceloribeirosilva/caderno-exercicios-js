@@ -27,3 +27,23 @@ Crie uma função que retorne todos os arquivos em um vetor.
 6. Criar uma função que converta em R$ pelo valor do Dolar atual, utilizando acesso à API do Banco Central.
     #### Dica: Utilizar axios para acessar a api: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/aplicacao#!/recursos
     ##### Criar testes de unidade
+
+7. No arquivo 07.js, criar as seguintes funções 
+
+* Função que irá representar o cálculo do Juros Simples. Essa função recebe capital, juros e o tempo do empréstimo. Retorna o valor do juros calculado.
+
+Cálculo: capital * juros * tempo
+
+* Função que irá representar o cálculo do montante + juros simples. 
+
+Cálculo: capital + juros simples
+
+* Função que irá representar o cálculo do montante + juros compostos.
+
+Cálculo: capital * (1 + juros) ^ tempo
+
+* Função que irá representar apenas o juros composto sem o montante
+
+Cálculo: (montante + juros composto) - capital
+
+Criar teste de unidade para cada função.
