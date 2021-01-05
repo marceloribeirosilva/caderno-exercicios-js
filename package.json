@@ -4,7 +4,7 @@
   "description": "Caderno de Exercícios JavaScript",
   "main": "01.js",
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.21.1"
   },
   "devDependencies": {
     "jest": "^25.1.0"
